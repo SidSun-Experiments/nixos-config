@@ -3,15 +3,10 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
-in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      (import "${home-manager}/nixos")
-      /home/sids/nixos_config/home-manager.nix
       /home/sids/nixos_config/apps.nix
       /home/sids/nixos_config/gpu.nix
       /home/sids/nixos_config/intel_ax200_fix.nix
@@ -106,11 +101,6 @@ in
     #  thunderbird
     ];
     useDefaultShell = true;
-  };
-  home-manager.users.sids = { pkgs, ... }: {
-    # The state version is required and should stay at the version you
-    # originally installed.
-    home.stateVersion = "23.11";
   };
 
   # Allow unfree packages

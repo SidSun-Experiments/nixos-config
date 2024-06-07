@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 { 
-  home-manager.users.sids = {
-#    programs.fish.enable = true;
-  };
-
   services.flatpak.enable = true;
   # add in config.nix: users.users.<myuser>.extraGroups = [ "docker" ];
   #virtualisation.docker.enable = true;
