@@ -41,7 +41,7 @@
     pkgs.bintools
     pkgs.squashfsTools
     pkgs.binwalk
-#    pkgs.postman
+    pkgs.pcscliteWithPolkit
     ## Cached drivers for NVIDIA CUDA
     pkgs.cachix
     ## Goland

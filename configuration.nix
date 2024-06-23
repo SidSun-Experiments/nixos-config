@@ -7,10 +7,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      /home/sids/nixos_config/apps.nix
-      /home/sids/nixos_config/gpu.nix
-      /home/sids/nixos_config/intel_ax200_fix.nix
-      ./cachix.nix
+      /home/sids/nixos-config/apps.nix
+      /home/sids/nixos-config/gpu.nix
+      /home/sids/nixos-config/intel_ax200_fix.nix
+      /home/sids/nixos-config/yubikey.nix
+      /home/sids/nixos-config/extensions.nix
+#      ./cachix.nix
     ];
 
   # Bootloader.
@@ -138,6 +140,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Read the above, you MORON
 
 }
