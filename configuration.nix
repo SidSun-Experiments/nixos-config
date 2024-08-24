@@ -88,6 +88,17 @@
     #media-session.enable = true;
   };
 
+  # Add Bluetooth config for pipewire
+  services.pipewire.wireplumber.extraConfig = {
+    "monitor.bluez.properties" = {
+        "bluez5.enable-sbc-xq" = true;
+        "bluez5.enable-msbc" = true;
+        "bluez5.enable-hw-volume" = true;
+        "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
+    };
+  };
+
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -97,7 +108,7 @@
   users.users.sids = {
     isNormalUser = true;
     description = "Sid Sun";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ];
     packages = with pkgs; [
       firefox
     #  thunderbird

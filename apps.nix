@@ -47,7 +47,15 @@
     ## Goland
     pkgs.zulu
     pkgs.mdadm
-#    pkgs.mdstat
+    pkgs.lshw
+    pkgs.smartmontools
+    pkgs.btrfs-progs
+    pkgs.zed-editor
+    pkgs.arduino-ide
+    pkgs.arduino-cli
+    pkgs.screen
+    # darn you, black-dragon74
+    pkgs.bat
   ];
 
   # go is installed with archive
